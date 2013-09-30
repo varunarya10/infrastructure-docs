@@ -17,6 +17,7 @@ Once installed, add the following plugins:
 * GitHub plugin
 * Git plugin
 * Job Configuration History Plugin
+* Publish over SSH Plugin
 
 #. Follow the `Github authentication plugin's setup instructions`_ on how to register an app on Github and retrieve the Client ID and Client Secret.
 #. Go to `Jenkins's Configure Global Security`_ page.
@@ -44,8 +45,13 @@ Once installed, add the following plugins:
 
 #. Check out https://github.com/JioCloud/jenkins-jobs (anywhere, e.g. in your home dir)
 #. Run ``./apply.sh``.
+#. su to the jenkins user (``sudo su - jenkins``)
+#. Run ``ssh-keygen``. Accept all the defaults (including empty passphrase)
+#. Go to `Global configuration`_ in Jenkins.
+#. Configure "docs" site under "Publish over SSH". Private key in ``/var/lib/jenkins/.ssh/id_rsa``.
 
 
 .. _Github authentication plugin's setup instructions: https://wiki.jenkins-ci.org/display/JENKINS/Github+OAuth+Plugin
 .. _Jenkins's Configure Global Security: http://jiocloud.rustedhalo.com:8080/configureSecurity/?
 .. _user configuration page: http://jiocloud.rustedhalo.com:8080/user/jiojenkins/configure
+.. _Global configuration: http://jiocloud.rustedhalo.com:8080/configure
