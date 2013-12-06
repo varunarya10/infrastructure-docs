@@ -12,6 +12,7 @@ Contents:
    :maxdepth: 2
 
    jenkins
+   mediawiki-openid
 
 
 Indices and tables
