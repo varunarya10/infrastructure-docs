@@ -51,3 +51,12 @@ Assumption: ``$IP`` is assumed to be the root of the wiki directory.
 	$wgGroupPermissions['user']['editinterface'] = true; 
  
 Now you can edit the ``<your_wiki_URL>/jiocloud/index.phpmediawiki:loginreqpagetext`` page, which is a protected page, which is presented when the user is not logged in.
+
+
+Troubleshooting
+---------------
+* If there are troubles uploading a file via the MediaWiki web interface, go to the wiki directory on the server and chown the ``images`` folder::
+
+	sudo chown -R www-data:www-data images/
+
+
